@@ -1,0 +1,27 @@
+// 
+// Decompiled by Procyon v0.5.36
+// 
+
+package org.apache.commons.lang3.function;
+
+import java.util.Objects;
+
+@FunctionalInterface
+public interface FailableDoubleConsumer<E extends Throwable>
+{
+    public static final FailableDoubleConsumer NOP = t -> {};
+    
+    default <E extends Throwable> FailableDoubleConsumer<E> nop() {
+        return (FailableDoubleConsumer<E>)FailableDoubleConsumer.NOP;
+    }
+    
+    void accept(final double p0) throws E, Throwable;
+    
+    default FailableDoubleConsumer<E> andThen(final FailableDoubleConsumer<E> after) {
+        Objects.requireNonNull(after);
+        return t -> {
+            this.accept(t);
+            after.accept(t);
+        };
+    }
+}

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="172005" android:versionName="0.1" android:compileSdkVersion="33" android:compileSdkVersionCodename="13" package="com.br.pixelmonbrasil.debug" platformBuildVersionCode="33" platformBuildVersionName="13">
+    <uses-sdk android:minSdkVersion="26" android:targetSdkVersion="33"/>
+    <uses-feature android:glEsVersion="20000"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="28"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <application android:theme="@style/AppTheme" android:label="Pixelmon Brasil" android:icon="@mipmap/ic_launcher" android:name="net.kdt.pojavlaunch.PXBRApplication" android:debuggable="true" android:process=":launcher" android:allowBackup="true" android:isGame="true" android:extractNativeLibs="true" android:usesCleartextTraffic="true" android:resizeableActivity="true" android:roundIcon="@mipmap/ic_launcher_round" android:appCategory="0" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:hasFragileUserData="true" android:allowNativeHeapPointerTagging="false">
+        <meta-data android:name="android.max_aspect" android:value="ratio_float"/>
+        <activity android:name="net.kdt.pojavlaunch.ActivityAccounts" android:exported="true">
+            <intent-filter>
+                <action android:name=".ActivityAccounts"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="net.kdt.pojavlaunch.WelcomeActivity" android:exported="true"/>
+        <activity android:label="Pixelmon Brasil" android:name="net.kdt.pojavlaunch.LauncherActivity" android:exported="true" android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="net.kdt.pojavlaunch.ImportControlActivity" android:exported="true" android:launchMode="singleInstance" android:configChanges="keyboard|keyboardHidden" android:windowSoftInputMode="stateVisible">
+            <intent-filter android:label="@string/import_control_label" android:scheme="content">
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="application/json"/>
+                <data android:mimeType="text/json"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/Theme.AppCompat.DayNight.Dialog" android:name="net.kdt.pojavlaunch.FatalErrorActivity" android:screenOrientation="sensorLandscape" android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenSize"/>
+        <activity android:theme="@style/Theme.AppCompat.DayNight.Dialog" android:name="net.kdt.pojavlaunch.ExitActivity" android:screenOrientation="sensorLandscape" android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenSize"/>
+        <activity android:name="net.kdt.pojavlaunch.CustomControlsActivity" android:exported="true" android:screenOrientation="sensorLandscape" android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenSize">
+            <intent-filter>
+                <action android:name=".CustomControlsActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="net.kdt.pojavlaunch.MainActivity" android:process=":game" android:launchMode="standard" android:screenOrientation="sensorLandscape" android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenLayout|screenSize|smallestScreenSize"/>
+        <provider android:name="net.kdt.pojavlaunch.scoped.FolderProvider" android:permission="android.permission.MANAGE_DOCUMENTS" android:exported="true" android:authorities="@string/storageProviderAuthorities" android:grantUriPermissions="true">
+            <intent-filter>
+                <action android:name="android.content.action.DOCUMENTS_PROVIDER"/>
+            </intent-filter>
+        </provider>
+        <provider android:name="net.kdt.pojavlaunch.scoped.FolderProvider" android:permission="android.permission.MANAGE_DOCUMENTS" android:exported="true" android:authorities="com.br.pixelmonbrasil.Launcher" android:grantUriPermissions="true">
+            <intent-filter>
+                <action android:name="android.content.action.DOCUMENTS_PROVIDER"/>
+            </intent-filter>
+        </provider>
+        <service android:name="net.kdt.pojavlaunch.services.ProgressService"/>
+        <service android:name="net.kdt.pojavlaunch.services.GameService" android:process=":game"/>
+        <uses-library android:name="androidx.window.extensions" android:required="false"/>
+        <uses-library android:name="androidx.window.sidecar" android:required="false"/>
+    </application>
+</manifest>

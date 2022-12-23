@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <net.kdt.pojavlaunch.prefs.BackButtonPreference/>
+    <PreferenceCategory android:title="Video settings">
+        <androidx.preference.ListPreference android:icon="@drawable/ic_setting_engine" android:entries="@array/renderer" android:title="@string/mcl_setting_category_renderer" android:key="renderer" android:defaultValue="opengles2" android:entryValues="@array/renderer_values" app:useSimpleSummaryProvider="true"/>
+        <androidx.preference.SwitchPreferenceCompat android:icon="@drawable/ic_setting_hide_notch" android:title="@string/mcl_setting_title_ignore_notch" android:key="ignoreNotch" android:summary="@string/mcl_setting_subtitle_ignore_notch" android:defaultValue="false"/>
+        <net.kdt.pojavlaunch.prefs.CustomSeekBarPreference android:icon="@drawable/ic_setting_screen_resolution" android:title="@string/mcl_setting_title_resolution_scaler" android:key="resolutionRatio" android:summary="@string/mcl_setting_subtitle_resolution_scaler" app:seekBarIncrement="5" app:selectable="false" app:showSeekBarValue="true"/>
+        <SwitchPreference android:title="@string/preference_sustained_performance_title" android:key="sustainedPerformance" android:summary="@string/preference_sustained_performance_description" android:defaultValue="false"/>
+        <androidx.preference.SwitchPreferenceCompat android:title="@string/mcl_setting_title_use_surface_view" android:key="alternate_surface" android:summary="@string/mcl_setting_subtitle_use_surface_view" android:defaultValue="false"/>
+    </PreferenceCategory>
+</PreferenceScreen>

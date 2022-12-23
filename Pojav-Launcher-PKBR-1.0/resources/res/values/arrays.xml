@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="hack_gles_shrink">
+        <item>@string/gles_hack_none</item>
+        <item>@string/gles_hack_always</item>
+        <item>@string/gles_hack_sometimes</item>
+    </array>
+    <array name="hack_gles_shrink_values">
+        <item>@null</item>
+        <item>1</item>
+        <item>4</item>
+    </array>
+    <array name="menu_customcontrol">
+        <item>@string/customctrl_addbutton</item>
+        <item>@string/customctrl_addbutton_drawer</item>
+        <item>@string/global_load</item>
+        <item>@string/global_save</item>
+        <item>@string/customctrl_selectdefault</item>
+    </array>
+    <array name="menu_customcontrol_customactivity">
+        <item>@string/customctrl_addbutton</item>
+        <item>@string/customctrl_addbutton_drawer</item>
+        <item>@string/global_load</item>
+        <item>@string/global_save</item>
+        <item>@string/customctrl_selectdefault</item>
+        <item>@string/customctrl_export</item>
+    </array>
+    <array name="menu_ingame">
+        <item>@string/control_forceclose</item>
+        <item>@string/control_viewout</item>
+        <item>@string/control_adebug</item>
+        <item>@string/control_customkey</item>
+        <item>@string/mcl_setting_title_mousespeed</item>
+        <item>@string/mcl_option_customcontrol</item>
+    </array>
+    <array name="renderer">
+        <item>@string/mcl_setting_renderer_gles2_4</item>
+    </array>
+    <array name="renderer_values">
+        <item>opengles2</item>
+        <item>opengles3_virgl</item>
+        <item>opengles3_desktopgl_angle_vulkan</item>
+    </array>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" app:key="">
+    <net.kdt.pojavlaunch.prefs.BackButtonPreference/>
+    <PreferenceCategory android:title="Categorias">
+        <Preference android:icon="@drawable/ic_menu_accounts" android:title="@string/preference_account_title" android:key="account_screen" android:summary="@string/preference_account_descripton">
+            <intent android:action=".ActivityAccounts"/>
+        </Preference>
+        <Preference android:icon="@drawable/ic_setting_video" android:title="@string/preference_video_title" android:key="video_screen_setting" android:summary="@string/preference_video_description" android:fragment="net.kdt.pojavlaunch.prefs.screens.LauncherPreferenceVideoFragment"/>
+        <Preference android:icon="@drawable/ic_menu_custom_controls" android:title="@string/preference_control_title" android:key="control_screen_setting" android:summary="@string/preference_control_description" android:fragment="net.kdt.pojavlaunch.prefs.screens.LauncherPreferenceControlFragment"/>
+        <Preference android:icon="@drawable/ic_setting_java_runtime" android:title="@string/preference_java_title" android:key="java_screen_setting" android:summary="@string/preference_java_description" android:fragment="net.kdt.pojavlaunch.prefs.screens.LauncherPreferenceJavaFragment"/>
+        <Preference android:icon="@drawable/ic_setting_misc" android:title="@string/preference_misc_title" android:key="misc_screen_setting" android:summary="@string/preference_misc_description" android:fragment="net.kdt.pojavlaunch.prefs.screens.LauncherPreferenceMiscellaneousFragment"/>
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,10 @@
+package kotlin.sequences;
+
+import kotlin.Metadata;
+
+@Metadata(mo11814d1 = {"kotlin/sequences/USequencesKt___USequencesKt"}, mo11816k = 4, mo11817mv = {1, 7, 1}, mo11819xi = 49)
+/* compiled from: _USequences.kt */
+public final class USequencesKt extends USequencesKt___USequencesKt {
+    private USequencesKt() {
+    }
+}

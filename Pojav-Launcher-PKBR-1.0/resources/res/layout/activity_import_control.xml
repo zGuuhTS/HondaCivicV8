@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="center" android:orientation="vertical" android:background="#0c0c0c" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.kdt.mcgui.MineEditText android:gravity="center" android:id="@+id/editText_import_control_file_name" android:layout_width="@dimen/_260sdp" android:layout_height="@dimen/_50sdp" android:hint="Nome do arquivo" android:imeOptions="actionUnspecified|flagForceAscii"/>
+    <com.kdt.mcgui.MineButton android:textStyle="bold" android:textColor="@android:color/black" android:gravity="center" android:id="@+id/mineButton_import_control" android:layout_width="@dimen/_260sdp" android:layout_height="@dimen/_50sdp" android:layout_marginTop="@dimen/_8sdp" android:text="@string/import_control_import_button" android:onClick="startImport"/>
+</LinearLayout>

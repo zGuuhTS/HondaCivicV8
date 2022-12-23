@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <net.kdt.pojavlaunch.prefs.BackButtonPreference/>
+    <PreferenceCategory android:title="Miscellaneous settings">
+        <SwitchPreference android:icon="@drawable/ic_setting_hash_verification" android:title="@string/mcl_setting_check_libraries" android:key="checkLibraries" android:summary="@string/mcl_setting_check_libraries_subtitle" android:defaultValue="true"/>
+        <SwitchPreference android:title="@string/arc_capes_title" android:key="arc_capes" android:summary="@string/arc_capes_desc" android:defaultValue="false"/>
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <net.kdt.pojavlaunch.prefs.BackButtonPreference/>
+    <PreferenceCategory android:title="Gestures ">
+        <androidx.preference.SwitchPreferenceCompat android:icon="@drawable/ic_setting_gesture_disable" android:title="@string/mcl_disable_gestures" android:key="disableGestures" android:summary="@string/mcl_disable_gestures_subtitle" android:defaultValue="false"/>
+        <net.kdt.pojavlaunch.prefs.CustomSeekBarPreference android:icon="@drawable/ic_setting_gesture_time" android:title="@string/mcl_setting_title_longpresstrigger" android:key="timeLongPressTrigger" android:summary="@string/mcl_setting_subtitle_longpresstrigger" app:seekBarIncrement="10" app:selectable="false" app:showSeekBarValue="true"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Buttons">
+        <Preference android:icon="@drawable/ic_menu_custom_controls" android:title="@string/mcl_option_customcontrol" android:key="custom_control_button" android:summary="@string/mcl_option_subtitle_customcontrol">
+            <intent android:action=".CustomControlsActivity"/>
+        </Preference>
+        <net.kdt.pojavlaunch.prefs.CustomSeekBarPreference android:icon="@drawable/ic_setting_control_scale" android:title="@string/mcl_setting_title_buttonscale" android:key="buttonscale" android:summary="@string/mcl_setting_subtitle_buttonscale" app:seekBarIncrement="5" app:selectable="false" app:showSeekBarValue="true"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Virtual mouse">
+        <net.kdt.pojavlaunch.prefs.CustomSeekBarPreference android:icon="@drawable/ic_setting_pointer_scale" android:title="@string/mcl_setting_title_mousescale" android:key="mousescale" android:summary="@string/mcl_setting_subtitle_mousescale" app:seekBarIncrement="5" app:selectable="false" app:showSeekBarValue="true"/>
+        <net.kdt.pojavlaunch.prefs.CustomSeekBarPreference android:icon="@drawable/ic_setting_mouse_speed" android:title="@string/mcl_setting_title_mousespeed" android:key="mousespeed" android:summary="@string/mcl_setting_subtitle_mousespeed" app:seekBarIncrement="5" app:selectable="false" app:showSeekBarValue="true"/>
+        <SwitchPreference android:title="@string/preference_mouse_start_title" android:key="mouse_start" android:summary="@string/preference_mouse_start_description"/>
+    </PreferenceCategory>
+</PreferenceScreen>
